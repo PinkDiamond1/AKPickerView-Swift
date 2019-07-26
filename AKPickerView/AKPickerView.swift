@@ -470,10 +470,12 @@ public class AKPickerView: UIView, UICollectionViewDataSource, UICollectionViewD
 			animated: animated,
             scrollPosition: UICollectionView.ScrollPosition())
 		self.scrollToItem(item, animated: animated)
+        let lastSelected = selectedItem
 		self.selectedItem = item
 		if notifySelection {
 			self.delegate?.pickerView?(self, didSelectItem: item)
 		}
+        self.collectionView.reloadItems(at: [IndexPath(row: lastSelected, section: 0)])
 	}
 
 	// MARK: Delegate Handling
