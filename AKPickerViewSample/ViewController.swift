@@ -12,8 +12,7 @@ class ViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDele
 
 	@IBOutlet var pickerView: AKPickerView!
 
-//    let titles = ["Tokyo", "Kanagawa", "Osaka", "Aichi", "Saitama", "Chiba", "Hyogo", "Hokkaido", "Fukuoka", "Shizuoka"]
-    let titles = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    let titles = ["Tokyo", "Kanagawa", "Osaka", "Aichi", "Saitama", "Chiba", "Hyogo", "Hokkaido", "Fukuoka", "Shizuoka"]
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -23,7 +22,6 @@ class ViewController: UIViewController, AKPickerViewDataSource, AKPickerViewDele
 		self.pickerView.font = UIFont(name: "HelveticaNeue-Light", size: 20)!
 		self.pickerView.highlightedFont = UIFont(name: "HelveticaNeue", size: 20)!
 		self.pickerView.pickerViewStyle = .flat
-        self.pickerView.interitemSpacing = 25.0
 		self.pickerView.maskDisabled = true
 		self.pickerView.reloadData()
 	}
